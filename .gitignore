@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Compiled files
+dist/
+build/
+
+# Typescript build files
+*.tsbuildinfo
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# MacOS files
+.DS_Store
+
+# pnpm specific files
+.pnp.*
