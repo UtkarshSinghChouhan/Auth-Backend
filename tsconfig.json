@@ -8,11 +8,15 @@
     "skipLibCheck": true, // Skip type checking of declaration files
     "forceConsistentCasingInFileNames": true, // Ensure file names are case-consistent
     "outDir": "dist", // Output directory for compiled files
-    "baseUrl": ".", // Base directory for resolving non-relative module names
+    "baseUrl": "./",                       // Base directory for resolving non-relative modules
     "paths": {
-      // Paths mapping for module resolution
-      "@src/*": ["src/*"]
-    }
+      "@src/*": ["src/*"],                 // Alias '@src' to the 'src' folder
+      "@models/*": ["src/models/*"],       // Alias '@models' to the 'src/models' folder
+      "@config/*": ["src/config/*"],       // Alias '@config' to the 'src/config' folder
+      "@services/*": ["src/services/*"],   // Alias '@services' to the 'src/services' folder
+      "@middlewares/*": ["src/middlewares/*"], // Alias '@middlewares' to the 'src/middlewares' folder
+      "@routes/*": ["src/routes/*"]        // Alias '@routes' to the 'src/routes' folder
+    },
   },
   "include": ["src/**/*", "src/types/**/*.d.ts"], // Include all TypeScript files in the src directory
   "exclude": ["node_modules", "**/*.spec.ts"] // Exclude node_modules and test files

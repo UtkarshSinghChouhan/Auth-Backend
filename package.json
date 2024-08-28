@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec ts-node src/server.ts",
+    "dev": "nodemon",
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts",
     "lint-staged": "lint-staged",
@@ -43,9 +43,9 @@
     "globals": "^15.9.0",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.9",
+    "nodemon": "^3.1.4",
     "prettier": "^3.3.3",
-    "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.19.0",
     "typescript": "^4.9.5",
     "typescript-eslint": "^8.3.0"
   },
