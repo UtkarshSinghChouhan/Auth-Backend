@@ -30,6 +30,10 @@ app.use('/api/auth', authRoutes);
 // Use protected routes
 app.use('/api', protectedRoutes);
 
+app.get('/', (req, res) => {
+  res.send(`<a href="/auth/google"> Authentication with google </a>`)
+})
+
 
 
 

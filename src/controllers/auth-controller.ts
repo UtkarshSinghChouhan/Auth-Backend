@@ -34,13 +34,15 @@ export const signup = async (req: Request, res: Response) => {
     });
 
     res.status(201).json({ message: 'User registered successfully' });
+
   } catch (error) {
-    res.status(500).json({ message: 'Server error' });
+    res.status(500).json({ message: error });
   }
 };
 
 // Login user
 export const login = async (req: Request, res: Response) => {
+
   const { email, password } = req.body;
 
   try {
@@ -66,20 +68,16 @@ export const login = async (req: Request, res: Response) => {
       maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
     });
 
-    res.json({ message: 'User logged in successfully' });
+    res.json({ message: 'User logged in successfully' });    
   } catch (error) {
-    res.status(500).json({ message: 'Server error' });
+    
+    res.status(500).json({ message: error });
   }
 };
 
 // Logout user
 export const logout = (req: Request, res: Response) => {
   try {
-    // res.cookie('jwt', '', {
-    //   httpOnly: true,
-    //   secure: process.env.NODE_ENV === 'production',
-    //   expires: new Date(0), // Expire the cookie
-    // });
     res.clearCookie('jwt');
     res.sendStatus(200).json({ message: 'User logged out successfully' });
   } catch (err) {
